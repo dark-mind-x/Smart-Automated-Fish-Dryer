@@ -32,12 +32,13 @@ export default function CommercialLandingPage() {
       {/* Navigation Bar */}
       <nav className="border-b border-slate-200 bg-white/90 backdrop-blur-md sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
-          <div className="flex items-center gap-2 z-50">
-            <div className="w-8 h-8 bg-blue-700 rounded-lg flex items-center justify-center shadow-lg shrink-0">
-              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-            </div>
+          
+          {/* Logo and Company Name */}
+          <div className="flex items-center gap-3 z-50">
+            {/* THIS IS WHERE YOUR LOGO LOADS */}
+            <img src="/logo.svg" alt="TechnoBiz Logo" className="w-40 h-40 sm:w-10 sm:h-10 object-contain text-xl" />
             <span className="text-xl sm:text-2xl font-black tracking-tight text-slate-900">
-              SmartDryer<span className="text-blue-700">Pro</span>
+              TechnoBiz
             </span>
           </div>
           
@@ -91,7 +92,7 @@ export default function CommercialLandingPage() {
 
       {/* Hero Section */}
       <header className="relative bg-slate-900 text-white overflow-hidden py-16 sm:py-24 md:py-32">
-        {/* <div className="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:2rem_2rem] sm:bg-[size:3rem_3rem]"></div> */}
+        <div className="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:2rem_2rem] sm:bg-[size:3rem_3rem]"></div>
         <div className="absolute top-0 right-0 w-[400px] sm:w-[800px] h-[400px] sm:h-[800px] bg-blue-600/20 blur-[80px] sm:blur-[120px] rounded-full translate-x-1/3 -translate-y-1/4"></div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-12 items-center">
@@ -123,7 +124,6 @@ export default function CommercialLandingPage() {
             </motion.div>
           </motion.div>
 
-          {/* Hero Image (Hidden on very small screens to save space, visible on sm and up) */}
           <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8 }} className="relative hidden sm:block">
             <div className="aspect-square md:aspect-[4/3] bg-gradient-to-tr from-slate-800 to-slate-700 rounded-3xl border border-slate-600 shadow-2xl flex flex-col items-center justify-center p-8 group">
               <svg className="w-12 h-12 sm:w-16 sm:h-16 text-slate-500 mb-4" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
@@ -160,7 +160,7 @@ export default function CommercialLandingPage() {
       <section id="why-us" className="py-16 sm:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-20">
-            <h2 className="text-3xl sm:text-4xl font-black mb-4 sm:mb-6 text-slate-900">Why Upgrade to SmartDryer Pro?</h2>
+            <h2 className="text-3xl sm:text-4xl font-black mb-4 sm:mb-6 text-slate-900">Why Upgrade to TechnoBiz?</h2>
             <p className="text-base sm:text-lg text-slate-600">Scaling commercial production requires consistency. We engineered the unpredictability out of the equation.</p>
           </div>
 
@@ -197,12 +197,11 @@ export default function CommercialLandingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-20">
             <h2 className="text-3xl sm:text-4xl font-black mb-4 sm:mb-6">Inside the Hardware</h2>
-            <p className="text-base sm:text-lg text-slate-400">A look at the engineered prototype components driving the SmartDryer Pro.</p>
+            <p className="text-base sm:text-lg text-slate-400">A look at the engineered components driving our industrial drying chambers.</p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 sm:gap-16 items-center">
             
-            {/* Spec details - Ordered first on mobile */}
             <div className="space-y-8 sm:space-y-10 order-2 lg:order-1">
               <div>
                 <h4 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 flex items-center gap-3">
@@ -227,7 +226,6 @@ export default function CommercialLandingPage() {
               </div>
             </div>
 
-            {/* Visual breakdown layout - Ordered second on mobile */}
             <div className="grid grid-cols-2 gap-3 sm:gap-4 order-1 lg:order-2 w-full max-w-md mx-auto lg:max-w-none">
               <div className="aspect-square bg-slate-800 rounded-xl sm:rounded-2xl border border-slate-700 flex flex-col items-center justify-center p-3 sm:p-4 text-center">
                 <svg className="w-6 h-6 sm:w-8 sm:h-8 text-teal-400 mb-2" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
@@ -260,14 +258,13 @@ export default function CommercialLandingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
             <h2 className="text-3xl sm:text-4xl font-black mb-4 sm:mb-6 text-slate-900">Technology Comparison</h2>
-            <p className="text-base sm:text-lg text-slate-600">See exactly why the SmartDryer Pro outperforms legacy preservation methods in every critical metric.</p>
+            <p className="text-base sm:text-lg text-slate-600">See exactly why our technology outperforms legacy preservation methods in every critical metric.</p>
           </div>
 
-          {/* Interactive Toggle for Mobile */}
           <div className="flex md:hidden justify-center gap-1 sm:gap-2 mb-8 bg-slate-200 p-1 rounded-lg w-full">
             <button onClick={() => setActiveTab('traditional')} className={`flex-1 py-2 px-1 text-xs sm:text-sm font-bold rounded-md transition-colors ${activeTab === 'traditional' ? 'bg-white text-slate-900 shadow' : 'text-slate-500'}`}>Traditional</button>
             <button onClick={() => setActiveTab('solar')} className={`flex-1 py-2 px-1 text-xs sm:text-sm font-bold rounded-md transition-colors ${activeTab === 'solar' ? 'bg-white text-slate-900 shadow' : 'text-slate-500'}`}>Basic Solar</button>
-            <button onClick={() => setActiveTab('smart')} className={`flex-1 py-2 px-1 text-xs sm:text-sm font-bold rounded-md transition-colors ${activeTab === 'smart' ? 'bg-blue-600 text-white shadow' : 'text-slate-500'}`}>SmartDryer</button>
+            <button onClick={() => setActiveTab('smart')} className={`flex-1 py-2 px-1 text-xs sm:text-sm font-bold rounded-md transition-colors ${activeTab === 'smart' ? 'bg-blue-600 text-white shadow' : 'text-slate-500'}`}>TechnoBiz</button>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
@@ -295,7 +292,7 @@ export default function CommercialLandingPage() {
 
             <div className={`bg-blue-50 rounded-2xl border-2 border-blue-600 p-6 sm:p-8 shadow-lg flex-col relative transform md:-translate-y-4 ${activeTab === 'smart' ? 'flex' : 'hidden md:flex'}`}>
               <div className="absolute top-0 right-0 bg-blue-600 text-white text-[9px] sm:text-[10px] font-bold px-2 py-1 sm:px-3 sm:py-1 rounded-bl-lg rounded-tr-xl uppercase tracking-wider">The Solution</div>
-              <h3 className="text-lg sm:text-xl font-bold mb-1 text-blue-900">SmartDryer Pro</h3>
+              <h3 className="text-lg sm:text-xl font-bold mb-1 text-blue-900">TechnoBiz System</h3>
               <p className="text-blue-600 text-xs sm:text-sm mb-6 border-b border-blue-200 pb-4">Active IoT Automation</p>
               <ul className="space-y-4 text-xs sm:text-sm text-slate-700 font-medium flex-1">
                 <li className="flex gap-3"><span className="text-blue-600 font-bold shrink-0">✓</span> 8-10 hour guaranteed rapid cycle</li>
@@ -314,7 +311,7 @@ export default function CommercialLandingPage() {
           <div className="text-center mb-10 sm:mb-16 max-w-3xl mx-auto">
             <h2 className="text-3xl sm:text-4xl font-black mb-4 text-slate-900">Lab-Verified Benchmarks</h2>
             <p className="text-base sm:text-lg text-slate-600">
-              Rigorous comparative trials prove the SmartDryer Pro's capacity to maintain precise thermal environments while aggressively cutting production times.
+              Rigorous comparative trials prove the system's capacity to maintain precise thermal environments while aggressively cutting production times.
             </p>
           </div>
 
@@ -361,7 +358,6 @@ export default function CommercialLandingPage() {
                 </tbody>
               </table>
             </div>
-            {/* Mobile Swipe Indicator */}
             <div className="block sm:hidden text-center py-2 text-xs text-slate-400 bg-slate-50 rounded-b-2xl border-t border-slate-100">
               Swipe table to view all data ↔
             </div>
@@ -373,17 +369,16 @@ export default function CommercialLandingPage() {
       <section id="faq" className="py-16 sm:py-24 bg-slate-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-12 sm:gap-16">
           
-          {/* FAQ Accordion */}
           <div>
             <h2 className="text-3xl sm:text-4xl font-black mb-2 sm:mb-4">Frequently Asked Questions</h2>
-            <p className="text-slate-400 mb-6 sm:mb-8 text-sm sm:text-base">Everything you need to know about scaling up with SmartDryer Pro.</p>
+            <p className="text-slate-400 mb-6 sm:mb-8 text-sm sm:text-base">Everything you need to know about scaling up with TechnoBiz.</p>
             
             <div className="space-y-3 sm:space-y-4">
               {[
                 { q: "How much power does the system consume?", a: "The system is highly energy efficient. It utilizes an intelligent ESP32 core that only activates heating elements or exhaust fans when the internal sensors dictate, preventing continuous power draw." },
                 { q: "Is the system easy to clean?", a: "Yes. The enclosed chamber is lined with food-grade materials that are easily wiped down, ensuring zero cross-contamination between batches." },
                 { q: "Do I need technical knowledge to operate it?", a: "Not at all. The entire workflow is automated. You load the product, use the web dashboard to input your target mass/moisture percentage, and the system automatically stops when the target is hit." },
-                { q: "Is the SmartDryer compliant with international health standards?", a: "Yes. By completely enclosing the drying process, it eliminates the heavy metal bioaccumulation (like lead and cadmium) that commonly causes open-sun dried fish to exceed WHO safety limits." }
+                { q: "Is the system compliant with international health standards?", a: "Yes. By completely enclosing the drying process, it eliminates the heavy metal bioaccumulation (like lead and cadmium) that commonly causes open-sun dried fish to exceed WHO safety limits." }
               ].map((faq, index) => (
                 <div key={index} className="border border-slate-700 rounded-lg overflow-hidden bg-slate-800/50">
                   <button 
@@ -410,7 +405,6 @@ export default function CommercialLandingPage() {
             </div>
           </div>
 
-          {/* Interactive Quote Form */}
           <div id="quote" className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 text-slate-900 shadow-2xl">
             <h3 className="text-xl sm:text-2xl font-black mb-2">Request a Commercial Quote</h3>
             <p className="text-slate-500 text-xs sm:text-sm mb-6 sm:mb-8">Get pricing on individual units or large-scale fleet deployments for processing plants.</p>
@@ -472,12 +466,10 @@ export default function CommercialLandingPage() {
       <footer className="bg-slate-950 text-slate-400 py-12 border-t border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-8 sm:gap-12 mb-8">
           <div>
-            <div className="flex items-center gap-2 mb-4 sm:mb-6">
-              <div className="w-5 h-5 sm:w-6 sm:h-6 bg-slate-800 rounded flex items-center justify-center shrink-0">
-                <svg className="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-              </div>
+            <div className="flex items-center gap-3 mb-4 sm:mb-6">
+              <img src="/logo.png" alt="TechnoBiz Logo" className="w-6 h-6 sm:w-8 sm:h-8 object-contain drop-shadow-sm" />
               <span className="font-bold tracking-tight text-white text-sm sm:text-base">
-                SmartDryer<span className="text-blue-500">Pro</span>
+                TechnoBiz
               </span>
             </div>
             <p className="text-xs sm:text-sm leading-relaxed mb-4">
@@ -502,7 +494,7 @@ export default function CommercialLandingPage() {
         </div>
         
         <div className="border-t border-slate-800 text-center pt-8 text-[10px] sm:text-xs text-slate-600 px-4">
-          <p>© {new Date().getFullYear()} SmartDryer Technologies. All rights reserved. Patented technology.</p>
+          <p>© {new Date().getFullYear()} TechnoBiz. All rights reserved. Patented technology.</p>
         </div>
       </footer>
     </div>
