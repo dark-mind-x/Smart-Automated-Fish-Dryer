@@ -36,7 +36,7 @@ export default function CommercialLandingPage() {
           {/* Logo and Company Name */}
           <div className="flex items-center gap-3 z-50">
             {/* THIS IS WHERE YOUR LOGO LOADS */}
-            <img src="/logo.svg" alt="TechnoBiz Logo" className="w-24 h-24 sm:w-10 sm:h-10 object-contain text-xl" />
+            <img src="/logo.svg" alt="TechnoBiz Logo" className="w-16 h-16 sm:w-10 sm:h-10 object-contain text-xl" />
             <span className="text-xl sm:text-2xl font-black tracking-tight text-slate-900">
               TechnoBiz
             </span>
